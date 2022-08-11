@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="form" onsubmit={validate(event);}>
+        <table>
+            <tr>
+                <td><strong>First Name</strong></td>
+                <td><input required type="text" id="fname" placeholder="Enter your First Name" /><sup id="FNameWarning"> *First name must have alphabets only!!</sup></td>
+            </tr>
+            <tr>
+                <td><strong>Last Name</strong></td>
+                <td><input required type="text" id="lname" placeholder="Enter your Last Name" /><sup id="LNameWarning"> *Last name must have alphabets only!!</sup></td>
+            </tr>
+            <tr>
+                <td><strong>Email</strong></td>
+                <td><input required type="email" placeholder="Enter your Email address" /></td>
+            </tr>
+            <tr>
+                <td><strong>Phone Number</strong></td>
+                <td><input type="tel" pattern="[0-9]{10}" placeholder="Only 10 digits are allowed" /></td>
+            </tr>
+            <tr>
+                <td><strong>Gender</strong></td>
+                <td><label><input id="male" type="radio" name="gender"/> Male</label><label><input id="female" type="radio" name="gender"/> Female</label><sup id="genderWarning"> *Please select alteast one gender !</sup></td>
+            </tr>
+            <tr>
+                <td><strong>Date of Birth</strong></td>
+                <td><input required type="date" /></td>
+            </tr>
+            <tr>
+                <td><strong>Address</strong></td>
+                <td><textarea required ></textarea></td>
+            </tr>
+            <tr>
+                <td><strong>City</strong></td>
+                <td><input type="text" ></td>
+            </tr>
+            <tr>
+                <td><strong>Area PIN</strong></td>
+                <td><input required type="text" placeholder="######" id="pin"><sup id="pinWarning"> *PINCODE must be a 6 digit number only!!</sup></td>
+            </tr>
+            <tr>
+                <td><strong>State</strong></td>
+                <td><input required type="text"></td>
+            </tr>
+            <tr>
+                <td><strong>Qualification</strong></td>
+                <td><select id="qual"> <option value="0">Select qualification</option> <option value="MBA">MBA</option> <option value="B.Tech">B.Tech</option></select><sup id="qualWarning">
+                     *Please Select atleast one Qualification
+                </sup></td>
+            </tr>
+            <tr>
+                <td><strong>Specialization</strong></td>
+                <td><label><input type="checkbox" id="spl1"/> Computer Science</label><br><label><input type="checkbox" id="spl2"/> Information Technology</label><br><label><input type="checkbox" id="spl3"/> Computer Architecture</label><br><label><input type="checkbox" id="spl4"/> Tele Communication</label><br><sup id="specialWarning">*Please Select atleast one specialization</sup></td>
+            </tr>
+            <tr>
+                <td><strong>Password</strong></td>
+                <td><input required type="password" /></td>
+            </tr>
+        </table>
+        <button type="submit">Register</button>
+    </form>
+<script src="script.js"></script>
+</body>
+</html>
